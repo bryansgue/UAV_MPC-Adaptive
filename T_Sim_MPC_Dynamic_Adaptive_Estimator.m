@@ -9,11 +9,11 @@ chi_real = chi';
 f = 30 % Hz 
 ts = 1/f;
 to = 0;
-tf = 90;
+tf = 30;
 t = (to:ts:tf);
 
 %% Definicion del horizonte de prediccion
-N = f; 
+N = f/2; 
 
 %% CONSTANTS VALUES OF THE ROBOT
 a = 0.0; 
@@ -50,7 +50,7 @@ Q = 0.5*eye(4);
 R = 0.01*eye(4);
 
 %% Definicion de los limites de las acciondes de control
-bounded = [1.2; -1.2; 1.2; -1.2; 1.2; -1.2; 5.5; -5.5];
+bounded = 3*[1.2; -1.2; 1.2; -1.2; 1.2; -1.2; 5.5; -5.5];
 
 %% Definicion del vectro de control inicial del sistema
 vcc = zeros(N,4);

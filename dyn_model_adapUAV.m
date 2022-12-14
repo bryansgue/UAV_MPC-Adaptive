@@ -70,8 +70,8 @@ Tu(2) = 2*rand()*(sign(0.2*sin(0.05*t)+3*cos(-0.05*t)));
 Tu(3) = -0.5*(2*sin(0.05*t)+1.5*cos(-0.025*t));
 Tu(4) = 1.5*(cos(0.05*t)+0.5*cos(0.025*7.5*t));
 
-%vp = inv(M)*(vref-C*v-G - Tu);
-vp = inv(M)*(vref-C*v-G);
+vp = inv(M)*(vref-C*v-G - Tu);
+%vp = inv(M)*(vref-C*v-G);
 v = v +vp*ts;
 end
 

@@ -20,7 +20,7 @@ b = 0.0;
 L =[a;b];
 
 % Definicion de los limites de las acciondes de control
-bounded = [1.2; -1.2; 1.2; -1.2; 1.2; -1.2; 5.5; -5.5];
+bounded = 3*[1.2; -1.2; 1.2; -1.2; 1.2; -1.2; 5.5; -5.5];
 
 % Seccion para cargar los parametros dinamicos del sistema
 
